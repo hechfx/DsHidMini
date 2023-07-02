@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Clone repo
         uses: actions/checkout@v2
+      - name: Install dotnet
+        uses: actions/setup-dotnet@v3
       - name: Install msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: build with msbuild
