@@ -1,0 +1,13 @@
+name: Run commands on different operating systems
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: build-project
+    runs-on: self-hosted
+    steps:
+      - run: msbuild build\_build.csproj
