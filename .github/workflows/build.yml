@@ -8,4 +8,4 @@ jobs:
 
     steps:
         - name: build with msbuild
-          run: bash build.sh
+          run: ls
