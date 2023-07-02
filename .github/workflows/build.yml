@@ -7,11 +7,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-        - uses: microsoft/setup-msbuild@v1.3.1
-          with:
-            msbuild-architecture: x64
-
         - name: build with msbuild
           run: |
             cd build
-            msbuild _build.csproj
+            dotnet msbuild _build.csproj
