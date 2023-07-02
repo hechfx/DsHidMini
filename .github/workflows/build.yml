@@ -9,5 +9,6 @@ jobs:
     steps:
         - name: build with msbuild
           run: |
+            ls
             cd build
             dotnet msbuild _build.csproj
