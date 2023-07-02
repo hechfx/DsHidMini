@@ -7,7 +7,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+      - name: Install msbuild
+        uses: actions/checkout@v2
       - name: build with msbuild
-      - uses: actions/checkout@v2
-      - uses: microsoft/setup-msbuild@v1.3.1
-      - run: msbuild build/_build.csproj
+        run: msbuild build/_build.csproj
