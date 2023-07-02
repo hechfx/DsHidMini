@@ -10,4 +10,4 @@ jobs:
     name: build-project
     runs-on: self-hosted
     steps:
-      - run: dotnet msbuild build/_build.csproj
+      - run: dotnet msbuild _build.csproj
