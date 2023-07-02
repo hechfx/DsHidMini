@@ -1,13 +1,13 @@
-name: Run commands on different operating systems
+name: Start build
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
 jobs:
   build:
-    name: build-project
     runs-on: self-hosted
     steps:
-      - run: bash build.sh
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1.3.1
+    - name: build project
+    - run: dotnet /build/_build.csproj
