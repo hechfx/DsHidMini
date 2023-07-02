@@ -14,4 +14,4 @@ jobs:
       - name: Install msbuild
         uses: microsoft/setup-msbuild@v1.1
       - name: build with msbuild
-        run: msbuild build/_build.csproj
+        run: ./build.cmd
