@@ -10,6 +10,6 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@v2
       - name: Install msbuild
-        uses: actions/checkout@v2
+        uses: microsoft/setup-msbuild@v1.1
       - name: build with msbuild
         run: msbuild build/_build.csproj
