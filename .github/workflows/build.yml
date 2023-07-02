@@ -1,13 +1,17 @@
-name: Start build
-on:
-  push:
-    branches: [ master ]
+name: build project
+
+on: [ push ]
 
 jobs:
   build:
     runs-on: self-hosted
+		
     steps:
-    - name: setup-msbuild
-      uses: microsoft/setup-msbuild@v1.3.1
-    - name: build project
-    - run: dotnet /build/_build.csproj
+        - uses: microsoft/setup-msbuild@v1.3.1
+          with:
+            msbuild-architecture: x64
+			
+        - name: build with msbuild
+          run: |
+            cd build
+            msbuild _build.csproj
