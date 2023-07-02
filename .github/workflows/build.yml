@@ -8,4 +8,4 @@ jobs:
 
     steps:
         - name: build with msbuild
-          run: ls
+          run: dotnet msbuild build/_build.csproj
